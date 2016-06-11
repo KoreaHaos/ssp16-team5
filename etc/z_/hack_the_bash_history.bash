@@ -21,7 +21,7 @@ function set_scripts_path_and_name() {
 set_scripts_path
 set_scripts_path_and_name
 
-most_imporant_history_item="bash $SCRIPTS_DIR/manage_git_directories.bash"
+most_imporant_history_item="bash $SCRIPTS_DIR/manage_git_directories.bash A"
 
 modify_history
 
