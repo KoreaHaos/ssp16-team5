@@ -44,8 +44,7 @@ EOF
 # ToDo : Abstract (is that the right word?) out the switch statement into a menu system.
 
 function run_program_loop() {
-    local users_choice
-    user_wants_to_quit="false"
+    local user_wants_to_quit="false"
     local run_it_quick="false"
     
     if [ ! -z "$1" ]
