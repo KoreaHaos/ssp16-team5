@@ -36,4 +36,9 @@ function make_readme() {
     #echo "$1"README.md
 }
 
-make_readme "$1"
+if [ -e ""$1"/README.md" ]
+then
+    echo "File $1/README.md exists."
+else
+    make_readme "$1"
+fi

@@ -3,6 +3,16 @@
 # Use at your own risk!
 
 # ToDo : Create various boilerplate templets.
+# ToDo : Have it take in a location to place slide sets.
+# ToDo : 
+# ToDo : 
+
+function move_path() {
+    if [ -d "$1" ]
+    then
+        cd "$1"
+    fi
+}
 
 function remove_unused_bits() {
     rm -rf .git
@@ -17,7 +27,7 @@ function remove_unused_bits() {
 }
 
 function clone_reveal_js_into_boilerplate_directory() {
-    local directory_to_put_boilerplate_in="b_reveal_js_directory"
+    local directory_to_put_boilerplate_in="$reveal_dirs_name"
     git clone https://github.com/hakimel/reveal.js.git $directory_to_put_boilerplate_in
     cd $directory_to_put_boilerplate_in
     remove_unused_bits $directory_to_put_boilerplate_in
@@ -55,10 +65,16 @@ function ask_to_continue_break_if_not_approved() {
 }
 
 function run_the_script() {
+    
+    if [ -z "$1" ]
+    then
+        cd $GOPATH
+    else
+        verify_path_and_cd_if_good "$1"
+    fi
     clear
     say_hello
     ask_to_continue_break_if_not_approved
-    cd $GOPATH
     clone_reveal_js_into_boilerplate_directory
     echo ""
     echo "The script finished and created the boiler plate of reveal.js."
