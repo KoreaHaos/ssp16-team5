@@ -8,6 +8,7 @@
 * Put all your documents such as proposal, presentation files, and survey docs under /doc/
 
 
+
 ./
 -src
 -doc
@@ -19,8 +20,7 @@
 ```bash
 # Move to project root. (C9 vm)
 cd $GOPATH
-
 mkdir src doc etc
-cd
+cd doc
 mkdir propos prsent survey
 ```

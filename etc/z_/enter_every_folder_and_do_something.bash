@@ -24,19 +24,25 @@ done
 
 function main() {
     SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    echo ""
-    echo "Start directory : $PWD"
-    echo ""
-    echo "Acted on directories :"
-    echo ""
+    if [ "$1" == "true" ]
+    then
+        REPLY="y"
+    else
+        echo ""
+        echo "Start directory : $PWD"
+        echo ""
+        echo "Acted on directories :"
+        echo ""
+        
+        recurse_directories "$PWD" "false"
+        
+        echo ""
+        echo ""
+        echo ""
+        read -p "Do action? (y/n) : " -n 1 -r
+        echo ""
+    fi
     
-    recurse_directories "$PWD" "false"
-    
-    echo ""
-    echo ""
-    echo ""
-    read -p "Do action? (y/n) : " -n 1 -r
-    echo ""
     if [[ $REPLY =~ ^[Yy]$ ]]
     then
         recurse_directories "$PWD" "true"
@@ -44,4 +50,4 @@ function main() {
     
 }
 
-main
+main "$1"

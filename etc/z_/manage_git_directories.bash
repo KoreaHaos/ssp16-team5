@@ -279,7 +279,6 @@ function p_pull_all_repos() {
       cd $CALLED_FROM_DIR;
     done
 }
-
 function s_show_status_of_all_repos() {
     for git_directory in "${GIT_DIRS[@]}"
     do
@@ -291,6 +290,11 @@ function s_show_status_of_all_repos() {
       cd $CALLED_FROM_DIR;
     done
 }
+
+function x_exit_program() {
+    user_wants_to_quit="true"
+}
+
 
 function say_hello() {
     echo "Work with git directories!"
