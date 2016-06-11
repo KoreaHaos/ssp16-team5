@@ -1,0 +1,7 @@
+browser dump
+
+http://www.instructables.com/id/Face-detection-and-tracking-with-Arduino-and-OpenC/
+https://sourceforge.net/projects/opencvlibrary/
+http://makezine.com/projects/make-40/face-recognition-treasure-safe/
+http://docs.opencv.org/2.4/doc/tutorials/objdetect/cascade_classifier/cascade_classifier.html
+https://github.com/tdicola/pi-facerec-box
