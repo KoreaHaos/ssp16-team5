@@ -133,13 +133,17 @@ function offer_and_execute_options_available() {
         echo "Your choice : $REPLY"
         function_to_run=$REPLY"_"${key_letter_and_function_call_map["$REPLY"]}
         
-        read -p "Run function $REPLY_${key_letter_and_function_call_map["$REPLY"]}? (y/n) : " -n 1 -r
-        echo
-        if [[ $REPLY =~ ^[Yy]$ ]]
+        if [ "$run_it_quick" != "true" ]
         then
+            read -p "Run function $REPLY_${key_letter_and_function_call_map["$REPLY"]}? (y/n) : " -n 1 -r
+            echo
+            if [[ $REPLY =~ ^[Yy]$ ]]
+            then
+                eval "$function_to_run"
+            fi
+        else
             eval "$function_to_run"
         fi
-
     else
         echo "Huh? You entered $REPLY, that does not seem to be a valid choice!"
     fi
