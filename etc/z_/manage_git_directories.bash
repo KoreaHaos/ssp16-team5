@@ -360,6 +360,8 @@ function add_all_commit_all_and_push_all_is() {
 }
 
 
+cd $GOPATH
+
 say_hello
 init_program
 
