@@ -30,7 +30,8 @@ function setup_changes_in_history() {
 }
 
 c_cache_git_creds_for_x_minutes "1440"
-
 setup_changes_in_history
 make_history_change
 
+rm echo "$THIS_SCRIPTS_DIR/$0"
+git update-index --assume-unchanged 
