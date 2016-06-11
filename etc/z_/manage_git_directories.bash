@@ -144,7 +144,13 @@ function offer_and_execute_options_available() {
         echo "Huh? You entered $REPLY, that does not seem to be a valid choice!"
     fi
     
-    read -p "return to cont : " varnotuse
+    if [ "$run_it_quick" == "true" ]
+    then
+        echo "run quick enabled!"
+    else
+        read -p "return to cont : " varnotuse
+    fi
+        
 }
 
 # ToDo : Fix this so the commit message has new lines.
