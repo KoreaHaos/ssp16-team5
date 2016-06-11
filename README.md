@@ -7,3 +7,20 @@
 * Put all your source code under /src/
 * Put all your documents such as proposal, presentation files, and survey docs under /doc/
 
+
+./
+-src
+-doc
+-- propos
+-- prsent
+-- survey
+-etc
+
+```bash
+# Move to project root. (C9 vm)
+cd $GOPATH
+
+mkdir src doc etc
+cd
+mkdir propos prsent survey
+```
