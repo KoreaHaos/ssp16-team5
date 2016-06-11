@@ -1,0 +1,1 @@
+bash $GOPATH/z_spring_2016_bash_toolset/haos_bash/produce_an_index_with_all_the_html_pages.bash 
