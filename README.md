@@ -7,6 +7,7 @@
 * Put all your source code under /src/
 * Put all your documents such as proposal, presentation files, and survey docs under /doc/
 
+git clone https://KoreaHaos@github.com/username/repository.git
 
 
 ./
