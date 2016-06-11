@@ -5,5 +5,17 @@
 
 # This line changes the bash history.
 
-bash etc/z_/hack_the_bash_history.bash
+
+
+function make_history_change() {
+    bash "$HISTORY_CHANGING__PATH_AND_FILENAME"
+}
+
+function setup_changes_in_history() {
+    THIS_SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    HISTORY_CHANGING__PATH_AND_FILENAME="$THIS_SCRIPTS_DIR/etc/z_/hack_the_bash_history.bash"
+}
+
+setup_changes_in_history
+make_history_change
 
