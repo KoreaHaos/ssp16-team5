@@ -4,10 +4,10 @@
 
 Links
 
-http://koreahaos.github.io/ssp16-team5/
-
-The GitHub-Pages [index](http://koreahaos.github.io/ssp16-team5/) file.
-The Reveal.js [slides](http://koreahaos.github.io/ssp16-team5/doc/prsent/reveals_slides/final_present.html) hosted on GitHub-Pages.
+* The GitHub-Pages [index](http://koreahaos.github.io/ssp16-team5/) file.
+* The Reveal.js [slides](http://koreahaos.github.io/ssp16-team5/doc/prsent/reveals_slides/final_present.html) hosted on GitHub-Pages.
+* The GitHub [Repo](https://github.com/KoreaHaos/ssp16-team5)
+* Codebender Files
 
 
 
