@@ -1,5 +1,5 @@
-#ifndef HAOS_MOVE_SMART_CAR_H
-#define HAOS_MOVE_SMART_CAR_H
+#ifndef HAOS_MOVE_SMARTCAR_H
+#define HAOS_MOVE_SMARTCAR_H
 
 void init_movement();
 
