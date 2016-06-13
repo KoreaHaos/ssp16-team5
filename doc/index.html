@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Intro</title>
+
+    <!-- Library scripts and markup -->
+    <script type='text/javascript' src='prsent/pgs/lib/js/x3dom.js'></script>
+    <link rel='stylesheet' type='text/css' href='prsent/pgs/lib/css/x3dom.css' />
+    <!--  
+    -->  
+    <style>
+        #logo_full_screen {
+            width: 100%;
+            height: 100%;
+            border-style: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <x3d id="logo_full_screen">
+        <scene>
+<Viewpoint position="0.01277 0.13000 0.34007" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.00011" zFar="1.13183" description="defaultX3DViewpointNode"></Viewpoint>            
+<!--
+<Viewpoint position="0.01277 0.13000 0.34007" orientation="0.00000 1.00000 0.00000 0.01257" description="defaultX3DViewpointNode"></Viewpoint>           
+            
+<Viewpoint position="0.01585 0.13000 0.58538" orientation="0.00000 1.00000 0.00000 0.01257" description="defaultX3DViewpointNode"></Viewpoint>
+            : <Viewpoint position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
+            <Viewpoint position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
+            
+            <Viewpoint id="spun_logo_viewpoint" position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
+
+Did you ever got the perfect camera settings while playing around within a scene and you wanted to save it but had no idea how?
+
+Just press the "D"-key to go into the debug mode and then "V" to get your viewpoint printed on to the debug console. From the you can copy and paste it directly to your X3DOM scene. 
+
+But be aware you will get the complete viewpoint including the current near and far plane, which you should delete before using the viewpoint in your scene. Otherwise the clipping planes will be fixed and not recalculated for interactions.
+
+                <Inline url="prsent/pgs/obj/last_try.x3d"></Inline>
+            -->
+            <Transform DEF="logos">
+            
+                    <Inline url="prsent/pgs/obj/theLast.x3d"></Inline>
+            
+            
+            </Transform>
+
+            <!-- info : http://kawahara.ca/x3d-how-to-rotate-an-object/ -->
+            <timeSensor DEF='clock' cycleInterval='8' loop='true'></timeSensor>
+            <orientationInterpolator DEF='spinThings' key='0 0.25 0.5 0.75 1' keyValue='0 1 0 0  0 1 0 1.57079  0 1 0 3.14159  0 1 0 4.71239  0 1 0 6.28317'></orientationInterpolator>
+
+            <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
+            <ROUTE fromNode='spinThings' fromField='value_changed' toNode='logos' toField='set_rotation'></ROUTE>
+
+            <!-- carroll_ewha_smar_obj.x3d 
+                <Inline url="./prsent/pgs/obj/almos.x3d"></Inline>
+            -->
+            <NavigationInfo type='none'>
+        </scene>
+    </x3d>
+</body>
+
+
+<!--  
+<script>
+    
+    
+    var window_has_opened=false;
+    
+    function has_window_opened() {
+        return window_has_opened;
+    }
+
+    function signal_window_has_opened() {
+        window_has_opened = true;
+    }
+    
+    window.setInterval(function() {
+        var date = new Date();
+        console.log("Checking Time! Time = " + date);
+        console.log("window_has_opened = " + window_has_opened);
+        if (date.getHours() === 8 && date.getMinutes() >= 20 && !has_window_opened()) {
+            //alert("Time!!");
+            console.log("TIME!");
+            var win = window.open('https://www.google.com/', '_blank');
+            if (win) {
+                signal_window_has_opened();
+                window.close();
+            }
+            else {
+                //Broswer has blocked it
+                alert('Please allow popups for this site');
+            }
+        } 
+    }, 55000); // Repeat every 55000 milliseconds (Slightly less than 1 minute.)
+
+</script>
+
+-->
+</html>
