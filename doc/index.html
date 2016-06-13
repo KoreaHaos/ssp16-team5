@@ -23,23 +23,11 @@
     <x3d id="logo_full_screen">
         <scene>
 <Viewpoint position="0.01277 0.13000 0.34007" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.00011" zFar="1.13183" description="defaultX3DViewpointNode"></Viewpoint>            
-<!--
-<Viewpoint position="0.01277 0.13000 0.34007" orientation="0.00000 1.00000 0.00000 0.01257" description="defaultX3DViewpointNode"></Viewpoint>           
-            
-<Viewpoint position="0.01585 0.13000 0.58538" orientation="0.00000 1.00000 0.00000 0.01257" description="defaultX3DViewpointNode"></Viewpoint>
-            : <Viewpoint position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
-            <Viewpoint position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
-            
-            <Viewpoint id="spun_logo_viewpoint" position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
 
-Did you ever got the perfect camera settings while playing around within a scene and you wanted to save it but had no idea how?
 
-Just press the "D"-key to go into the debug mode and then "V" to get your viewpoint printed on to the debug console. From the you can copy and paste it directly to your X3DOM scene. 
 
-But be aware you will get the complete viewpoint including the current near and far plane, which you should delete before using the viewpoint in your scene. Otherwise the clipping planes will be fixed and not recalculated for interactions.
 
-                <Inline url="prsent/pgs/obj/last_try.x3d"></Inline>
-            -->
+
             <Transform DEF="logos">
             
                     <Inline url="prsent/pgs/obj/theLast.x3d"></Inline>
@@ -54,13 +42,22 @@ But be aware you will get the complete viewpoint including the current near and 
             <ROUTE fromNode='clock' fromField='fraction_changed' toNode='spinThings' toField='set_fraction'></ROUTE>
             <ROUTE fromNode='spinThings' fromField='value_changed' toNode='logos' toField='set_rotation'></ROUTE>
 
-            <!-- carroll_ewha_smar_obj.x3d 
                 <Inline url="./prsent/pgs/obj/almos.x3d"></Inline>
+            <!-- carroll_ewha_smar_obj.x3d 
             -->
             <NavigationInfo type='none'>
         </scene>
     </x3d>
 </body>
+
+
+
+
+
+
+
+
+
 
 
 <!--  
@@ -100,3 +97,33 @@ But be aware you will get the complete viewpoint including the current near and 
 
 -->
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<Viewpoint position="0.01277 0.13000 0.34007" orientation="0.00000 1.00000 0.00000 0.01257" description="defaultX3DViewpointNode"></Viewpoint>           
+            
+<Viewpoint position="0.01585 0.13000 0.58538" orientation="0.00000 1.00000 0.00000 0.01257" description="defaultX3DViewpointNode"></Viewpoint>
+            : <Viewpoint position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
+            <Viewpoint position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
+            
+            <Viewpoint id="spun_logo_viewpoint" position="0.01300 0.13000 0.35891" orientation="0.00000 1.00000 0.00000 0.01257" zNear="0.16130" zFar="0.64544" description="defaultX3DViewpointNode"></Viewpoint>
+
+Did you ever got the perfect camera settings while playing around within a scene and you wanted to save it but had no idea how?
+
+Just press the "D"-key to go into the debug mode and then "V" to get your viewpoint printed on to the debug console. From the you can copy and paste it directly to your X3DOM scene. 
+
+But be aware you will get the complete viewpoint including the current near and far plane, which you should delete before using the viewpoint in your scene. Otherwise the clipping planes will be fixed and not recalculated for interactions.
+
+                <Inline url="prsent/pgs/obj/last_try.x3d"></Inline>
+            -->
